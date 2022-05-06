@@ -7,7 +7,7 @@ alert ("Bienvenido " + nombre + " tenemos para ofrecerte creditos increibles con
 
 
 let monto = Number (prompt ("Ingrese el monto a financiar"))
-let cuotas = prompt("Elige en cuantas cuotas quieres finanziar tu credito!!!, podes hacerlo en 1, 3, 6 o 12 cuotas con intereses super bajos!!.")
+let cuotas = prompt("Elige en cuantas cuotas quieres financiar tu credito!!!, podes hacerlo en 1, 3, 6 o 12 cuotas con intereses super bajos!!.")
 
 
 let totalCuotas = monto / cuotas
