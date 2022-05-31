@@ -2,15 +2,19 @@
 let cuotas = 0
 
 
+
 do {
 
     let usuario = prompt("Ingresa tu nombre")
-    let nombre = mayuscula(usuario)
 
+    let nombre = mayuscula(usuario)
+    
     alert ("Bienvenido " + nombre + " tenemos para ofrecerte creditos increibles con intereses super bajos!!!")
 
     let monto = Number (prompt ("Ingrese el monto a financiar"))
-    let cuotas = prompt("Elige en cuantas cuotas quieres financiar tu credito!!!, podes hacerlo en 1, 3, 6 o 12 cuotas con intereses super bajos!!.")
+
+   let cuotas = prompt("Elige en cuantas cuotas quieres financiar tu credito!!!, podes hacerlo en 1, 3, 6 o 12 cuotas con intereses super bajos!!.")
+
     let totalCuotas = monto / cuotas
     let totalCuotasDecimales = totalCuotas.toFixed(2)
     
@@ -41,19 +45,19 @@ do {
     
     
     function cuota3 (a, b, c, d) {
-        alert ("El credito en 3 cuotas de $" + a + " da un total de $" + d + " sumando el 21% de interes da un total a pagar de $" +  (a + (a*c))  + " final por mes." )
+        alert ("El credito en 3 cuotas de $" + a + " da un total de $" + d + " sumando el 21% de interes da un total a pagar de $" +  (d + (d*c))  + " final por mes." )
     }
     function cuota6 (a, b, c, d) {
-        alert ("El credito en 6 cuotas de $" + a + " da un total de $" + d + " sumando el 40% de interes da un total a pagar de $" + ( a + (a*c)) + " final por mes.")
+        alert ("El credito en 6 cuotas de $" + a + " da un total de $" + d + " sumando el 40% de interes da un total a pagar de $" + ( d + (d*c)) + " final por mes.")
     }
     function cuota12 (a, b, c, d) {
-        alert ("El credito en 12 cuotas de $" + a + " da un total de $" + d + " sumando el 120% de interes da un total a pagar de $" + ( a + (a*c)) + " final por mes.")
+        alert ("El credito en 12 cuotas de $" + a + " da un total de $" + d + " sumando el 120% de interes da un total a pagar de $" + ( d + (d*c)) + " final por mes.")
     }
     function cuota1 (a, b, c, d) {
-        alert ("para un credito de 1 cuota de $" + a + " sumando el 15% de interes da un total a pagar de $" + ( a + (a*c)) + " final.")
+        alert ("para un credito de 1 cuota de $" + a + " sumando el 15% de interes da un total a pagar de $" + ( d + (d*c)) + " final.")
     }
     
     function mayuscula(ma) {
         return ma.charAt(0).toUpperCase() + ma.slice(1);
       } 
-} while (cuotas !== 3 || cuotas !== 6 || cuotas !== 12 || cuotas !== 1);
+} while (cuotas ==  3 || cuotas == 6 || cuotas == 12 || cuotas == 1);
